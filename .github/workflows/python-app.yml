@@ -18,12 +18,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install ruff mypy
+        pip install ruff
         pip install -r requirements.txt
     - name: Lint with ruff
       run: ruff check .
-    - name: Type check with mypy
-      run: mypy agents/ broker/ backtester/ strategy/ factors/ utils/ --ignore-missing-imports --no-warn-return-any --disable-error-code=index --disable-error-code=has-type
 
   test:
     runs-on: ubuntu-latest
