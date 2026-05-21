@@ -1,0 +1,24 @@
+[project]
+name = "quant-trading"
+version = "0.1.0"
+description = "LLM-Driven Quantitative Trading System"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-v --tb=short"
+
+[tool.mypy]
+ignore_missing_imports = true
+strict = false
+warn_return_any = false
+warn_unused_configs = true
+disable_error_code = ["index"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]

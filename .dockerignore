@@ -1,0 +1,11 @@
+.env
+.git/
+venv/
+__pycache__/
+*.cache
+tests/
+.mypy_cache/
+.pytest_cache/
+README.md
+all_commits.txt
+*.egg-info/
